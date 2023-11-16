@@ -1,0 +1,16 @@
+{
+  "development": {
+    "username": "dashboard_dbuser",
+    "password": "MN8cmICSR5LykQ3fH5lCrfOHwfwtamJE",
+    "database": "dashboard_3le0",
+    "host": "dpg-claop5iqviqc73bhs7qg-a.oregon-postgres.render.com",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "dashboard_dbuser",
+    "password": "MN8cmICSR5LykQ3fH5lCrfOHwfwtamJE",
+    "database": "dashboard_3le0",
+    "host": "dpg-claop5iqviqc73bhs7qg-a.oregon-postgres.render.com",
+    "dialect": "postgres"
+  }
+}
