@@ -18,7 +18,6 @@ module.exports = {
         let cantidad = await Usuarios.count();
         const newuser = new Usuarios({
             // Ya se corrigio, si no te funciona prueba la vieja confiable "DROP TABLE Usuarios CASCADE"
-            id_tipousuario: 2,
             nombres: req.body.name,
             apellidos: req.body.lastname,
             correo: req.body.email,
