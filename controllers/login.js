@@ -90,11 +90,16 @@ module.exports = {
             profileName: user.profile_name,
             url_foto: user.url_foto
         }
-
-        res.header('auth-token', token).json({
+        try {
+            res.header('auth-token', token).json({
             error: null,
             data: data
         })
+        } catch (error) {
+            console.log(error)
+            res.status(400).json({error})
+        }
+        
 
     },
 
