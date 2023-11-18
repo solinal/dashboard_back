@@ -70,7 +70,7 @@ module.exports = {
         }  
     },
     login: async (req, res)=>{
-
+        try {
         const user = await Usuarios.findOne({where: {correo: req.body.email}});
         if (!user) return res.status(400).json({ error: 'Usuario no encontrado' });
         const validPassword = await bcrypt.compare(req.body.password, JSON.parse(user.contrasena));
@@ -90,11 +90,10 @@ module.exports = {
             profileName: user.profile_name,
             url_foto: user.url_foto
         }
-        try {
             res.header('auth-token', token).json({
             error: null,
             data: data
-        })
+            })
         } catch (error) {
             console.log(error)
             res.status(400).json({error})
