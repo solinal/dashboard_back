@@ -17,6 +17,12 @@
     "password": "MN8cmICSR5LykQ3fH5lCrfOHwfwtamJE",
     "database": "dashboard_3le0",
     "host": "dpg-claop5iqviqc73bhs7qg-a.oregon-postgres.render.com",
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
   }
 }
